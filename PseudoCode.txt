@@ -1,0 +1,73 @@
+Build the boxes (HTML)
+    -Each box would need its own ID
+    -There will be a class of boxes (container)
+Center them (CSS)
+    put 9 boxes in one big box
+    Create the Xs and Os
+Apply Click to boxes (js)
+    Alternate between X & O
+    add event to click on the class of boxes
+    add logic to know if a person has won
+    need an alert for when they win
+    the query selector will have to select each individual ID so we can assing a body to each div ( query selector will act on the small boxes with the click)
+    Alternate from X and O with each click (variable and alternatives)
+
+Pseudo Code
+
+HTML
+Create a div container with class called 'bigContainer'
+    inside create another 9 divs with a class called 'smallBoxes'
+    each container has seperate id's 1-9
+
+
+CSS
+make border for each smallBoxes class
+giving the boxes the correct size
+bigContiner div gets borders
+Using flexbox
+    Center container div 
+    center the 9 boxes in a matrix
+color background
+Color for Xs & Os
+
+
+JS
+generate query selectors for divs.
+playMarker = true or false
+eventListeners for the IDs
+    playerMarker = !playMarker
+
+winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6] ]
+xPoints = []
+oPoints = []
+When a player clicks on a box save it to xPoints or oPoints. 
+Sort the xPoints and return back to xPoints = sorted xPoints
+sort the oPoints and return back to oPoints = sorted oPoints
+Then compare the xPoints & oPoints to winConditions (make sure not to use strict (===) equality because we have strings)
+use for loop with an array to check for win condition
+    if (win condition is met) {
+
+        if(playerMarker = true){
+        alert "you X won"}
+
+        if(playerMarker = false){
+        alert "you O won"}
+        }
+    else if (all boxes are full){
+        alert "Draw"
+    }
+
+
+function reset(if alert is clicked){
+    painting stuff
+}
+
+
+after each click do a for loop (0-8) that look at each div and if it belongs to x, give that div's ID to xPoints if it belongs to y give that div's ID to oPoints
+the for loop checks xPoints array and oPoints array againt the winConditions.
+
+Alternative way:
+
+
+
+[6,4,2] == [2,4,6]
